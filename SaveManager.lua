@@ -159,7 +159,7 @@ local SaveManager = {} do
 		local out = {}
 		for i = 1, #list do
 			local file = list[i]
-			if file:sub(-5) == '.cfg' then
+			if file:sub(-4) == '.cfg' then
 				-- i hate this but it has to be done ...
 
 				local pos = file:find('.cfg', 1, true)
