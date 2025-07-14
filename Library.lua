@@ -1187,6 +1187,8 @@ do
                 if Key == 'MB1' or Key == 'MB2' then
                     return Key == 'MB1' and InputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1)
                         or Key == 'MB2' and InputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton2);
+                elseif Key == '-' then
+                    return false
                 else
                     return InputService:IsKeyDown(Enum.KeyCode[KeyPicker.Value]);
                 end;
