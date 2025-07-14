@@ -1,6 +1,6 @@
 local InputService = game:GetService('UserInputService');
 local TextService = game:GetService('TextService');
-local CoreGui = game:GetService('CoreGui')
+local CoreGui = game:GetService('CoreGui');
 local Teams = game:GetService('Teams');
 local Players = game:GetService('Players');
 local RunService = game:GetService('RunService')
@@ -997,7 +997,7 @@ do
 
         Options[Idx] = ColorPicker;
 
-        return self;
+        return ColorPicker;
     end;
 
     function Funcs:AddKeyPicker(Idx, Info)
