@@ -1,6 +1,6 @@
 local InputService = game:GetService('UserInputService');
 local TextService = game:GetService('TextService');
-local CoreGui = game:GetService('CoreGui');
+local CoreGui = game:GetService('CoreGui')
 local Teams = game:GetService('Teams');
 local Players = game:GetService('Players');
 local RunService = game:GetService('RunService')
@@ -1258,8 +1258,9 @@ do
                     if Input.UserInputType == Enum.UserInputType.Keyboard then
                         if Input.KeyCode == Enum.KeyCode.Backspace then
                             Key = '-';
+                        else
+                            Key = Input.KeyCode.Name;
                         end;
-                        Key = Input.KeyCode.Name;
                     elseif Input.UserInputType == Enum.UserInputType.MouseButton1 then
                         Key = 'MB1';
                     elseif Input.UserInputType == Enum.UserInputType.MouseButton2 then
