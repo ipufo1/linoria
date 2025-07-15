@@ -187,7 +187,7 @@ local SaveManager = {} do
 		if isfile(self.Folder .. '/settings/autoload.txt') then
 			local name = readfile(self.Folder .. '/settings/autoload.txt')
 
-			local success, err = self:Load(name)
+			local success, err = self:Load(name:sub(1, #name - 4))
 			if not success then
 				return self.Library:Notify('failed to load autoload config: ' .. err)
 			end
@@ -214,7 +214,7 @@ local SaveManager = {} do
 				return self.Library:Notify('invalid config name (empty)', 2)
 			end
 
-			local success, err = self:Save(name)
+			local success, err = self:Save(name:sub(1, #name - 4))
 			if not success then
 				return self.Library:Notify('failed to save config: ' .. err)
 			end
@@ -226,7 +226,7 @@ local SaveManager = {} do
 		end):AddButton('load config', function()
 			local name = Options.SaveManager_ConfigList.Value
 
-			local success, err = self:Load(name)
+			local success, err = self:Load(name:sub(1, #name - 4))
 			if not success then
 				return self.Library:Notify('failed to load config: ' .. err)
 			end
@@ -237,7 +237,7 @@ local SaveManager = {} do
 		section:AddButton('overwrite config', function()
 			local name = Options.SaveManager_ConfigList.Value
 
-			local success, err = self:Save(name)
+			local success, err = self:Save(name:sub(1, #name - 4))
 			if not success then
 				return self.Library:Notify('failed to overwrite config: ' .. err)
 			end
