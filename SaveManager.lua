@@ -214,7 +214,7 @@ local SaveManager = {} do
 				return self.Library:Notify('invalid config name (empty)', 2)
 			end
 
-			local success, err = self:Save(name:sub(1, #name - 4))
+			local success, err = self:Save(name)
 			if not success then
 				return self.Library:Notify('failed to save config: ' .. err)
 			end
