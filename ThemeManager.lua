@@ -190,7 +190,7 @@ local ThemeManager = {} do
 				end
 
 				if char == '/' or char == '\\' then
-					table.insert(out, file:sub(pos + 1, start - 1))
+					table.insert(out, file:sub(pos + 1))
 				end
 			end
 		end
